@@ -16,24 +16,38 @@ Tobacco3482-D has 10 classes with images of size 1000xW. Each sample image has 2
 
 
 # Generating the datasets from scratch
-## Install dependencies:
+Install the project dependencies.
 ```
 pip install -r requirements.txt
 ```
 
 ## RVL-CDIP-D:
+Set the DATASET_DIR to the root path of original RVL-CDIP dataset. 
 ```
 export DATASET_DIR=</path/to/RVL-CDIP>
-export DATASET_OUTPUT_DIR=</path/to/RVL-CDIP-D>
-./scripts/augment.sh --cfg ./cfg/rvlcdip-aug.yaml
 ```
-
+Set the DATASET_OUTPUT_DIR to the output path where the distorted dataset RVL-CDIP-D will be generated.
+```
+export DATASET_OUTPUT_DIR=</path/to/RVL-CDIP-D>
+```
+Run the augmentation script with the RVL-CDIP config.
+```
+ ./scripts/augment.sh --cfg ./cfg/rvlcdip-aug.yaml
+```
 ## Tobacco3482-D:
+Set the DATASET_DIR to the root path of original Tobacco3482 dataset. 
 ```
 export DATASET_DIR=</path/to/Tobacco3482>
-export DATASET_OUTPUT_DIR=</path/to/Tobacco3482-D>
-./scripts/augment.sh --cfg ./cfg/tobacco-aug.yaml
+```
 
+Set the DATASET_OUTPUT_DIR to the output path where the distorted dataset Tobacco3482-D will be generated. 
+```
+export DATASET_OUTPUT_DIR=</path/to/Tobacco3482-D>
+```
+
+Run the augmentation script with the Tobacco3482 config.
+```
+ ./scripts/augment.sh --cfg ./cfg/tobacco-aug.yaml
 ```
 
 # Citation
@@ -42,7 +56,7 @@ If you find this useful in your research, please consider citing:
 @article{saifullah2022doc-robustness,
   title={Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification},
   author={Saifullah, S. A. Siddiqui, s. Agne, A. Dengel, S. Ahmed},
-  journal={},
+  journal={ArXiv},
   year={2022}
 }
 ```
