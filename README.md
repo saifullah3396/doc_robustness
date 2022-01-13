@@ -40,7 +40,7 @@ export DATASET_OUTPUT_DIR=</path/to/Tobacco3482-D>
 If you find this useful in your research, please consider citing:
 ```
 @article{saifullah2022doc-robustness,
-  title={Are Deep Models Robust against Real Distortions?A Case Study on Document Image Classification},
+  title={Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification},
   author={Saifullah, S. A. Siddiqui, s. Agne, A. Dengel, S. Ahmed},
   journal={},
   year={2022}
