@@ -1,0 +1,21 @@
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.9/index.html
+
+autopep8==1.5.7
+datasets==1.11.0
+torchvision==0.10.0
+pytorch-lightning==1.4.2
+coloredlogs==15.0.1
+scikit-image==0.17.2
+timm==0.4.12
+Pillow==8.3.1
+transformers==4.10.2
+scikit-image==0.17.2
+scikit-learn==0.24.2
+dataclasses
+seqeval==1.2.2
+torchtext==0.10.0
+dacite==1.6.0
+datadings==3.4.2
+efficientnet_pytorch
+opencv-python
+./external/ocrodeg

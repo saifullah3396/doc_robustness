@@ -1,0 +1,259 @@
+basic_args:
+  output_dir: ''
+  overwrite_output_dir: False
+  seed: 42
+  n_gpu: 1
+  n_nodes: 1
+  do_train: True
+  do_eval: True
+  do_test: True
+
+data_args:
+  dataset_name: rvlcdip
+  dataset_dir: ${DATASET_DIR}
+  data_caching_args:
+    use_datadings: False
+    cache_resized_images: False
+    load_data_to_ram: False
+    cached_data_name: rvlcdip
+    dataset_cache_dir: ./datasets/
+  data_splitting_args: null
+  data_transforms_args: null
+  extras: null
+
+aug_args:
+  output_aug_dir: ${DATASET_OUTPUT_DIR}
+  n_parallel_jobs: 40
+  datasets: ['train']
+  augmentations:
+    - name: brightness
+      params:
+        - beta: .1
+        - beta: .2
+        - beta: .3
+        - beta: .4
+        - beta: .5
+    - name: contrast
+      params:
+        - alpha: 0.6
+        - alpha: 0.5
+        - alpha: 0.4
+        - alpha: 0.3
+        - alpha: 0.2
+    # - name: translation
+    #   params:
+    #     - magnitude: [0.050, 0.050]
+    #     - magnitude: [0.075, 0.075]
+    #     - magnitude: [0.100, 0.100]
+    #     - magnitude: [0.125, 0.125]
+    #     - magnitude: [0.150, 0.150]
+    - name: affine
+      params:
+        - degrees: [-1, 1]
+          translate: [0.05, 0.05]
+          shear: [-1, 1]
+        - degrees: [-2, 2]
+          translate: [0.075, 0.075]
+          shear: [-2, 2]
+        - degrees: [-5, 5]
+          translate: [0.1, 0.1]
+          shear: [-3, 3]
+        - degrees: [-7.5, 7.5]
+          translate: [0.125, 0.125]
+          shear: [-4, 4]
+        - degrees: [-10, 10]
+          translate: [0.15, 0.15]
+          shear: [-5, 5]
+    - name: scale
+      params:
+        - scale: [0.95, 1.05]
+        - scale: [0.9, 1.1]
+        - scale: [0.85, 1.15]
+        - scale: [0.8, 1.2]
+        - scale: [0.75, 1.25]
+    # - name: rotation
+    #   params:
+    #     - magnitude: 1.00
+    #     - magnitude: 2.50
+    #     - magnitude: 5.00
+    #     - magnitude: 7.50
+    #     - magnitude: 10.0
+    - name: binary_blur
+      params:
+        - sigma: 0.9
+        - sigma: 0.95
+        - sigma: 1.0
+        - sigma: 1.05
+        - sigma: 1.1
+    - name: noisy_binary_blur
+      params:
+        - sigma: 0.10
+          noise: 0.20
+        - sigma: 0.10
+          noise: 0.225
+        - sigma: 0.10
+          noise: 0.25
+        - sigma: 0.10
+          noise: 0.275
+        - sigma: 0.10
+          noise: 0.30
+    - name: defocus_blur
+      params:
+        - radius: 2
+          alias_blur: 0.15
+        - radius: 2
+          alias_blur: 0.185
+        - radius: 2
+          alias_blur: 0.2
+        - radius: 2
+          alias_blur: 0.25
+        - radius: 3
+          alias_blur: 0.25
+    - name: motion_blur
+      params:
+        - size: 5
+        - size: 6
+        - size: 7
+        - size: 8
+        - size: 9
+    - name: zoom_blur
+      params:
+        - zoom_factor_start: 1.0
+          zoom_factor_end: 1.02
+          zoom_factor_step: 0.005
+        - zoom_factor_start: 1.0
+          zoom_factor_end: 1.02
+          zoom_factor_step: 0.01
+        - zoom_factor_start: 1.0
+          zoom_factor_end: 1.03
+          zoom_factor_step: 0.01
+        - zoom_factor_start: 1.0
+          zoom_factor_end: 1.03
+          zoom_factor_step: 0.005
+        - zoom_factor_start: 1.0
+          zoom_factor_end: 1.03
+          zoom_factor_step: 0.01
+    - name: random_distortion
+      params:
+        - sigma: 15
+          maxdelta: 2.0
+        - sigma: 10
+          maxdelta: 2.0
+        - sigma: 5
+          maxdelta: 2.0
+        - sigma: 2
+          maxdelta: 2.0
+        - sigma: 1
+          maxdelta: 2.0
+    - name: random_blotches
+      params:
+        - fgblobs: 0.0001
+          bgblobs: 0.00005
+          fgscale: 9
+          bgscale: 9
+        - fgblobs: 0.0002
+          bgblobs: 0.00005
+          fgscale: 9
+          bgscale: 9
+        - fgblobs: 0.00025
+          bgblobs: 0.00005
+          fgscale: 9
+          bgscale: 9
+        - fgblobs: 0.0003
+          bgblobs: 0.00005
+          fgscale: 9
+          bgscale: 9
+        - fgblobs: 0.0005
+          bgblobs: 0.00005
+          fgscale: 9
+          bgscale: 9
+    - name: surface_distortion
+      params:
+        - magnitude: 5.0
+        - magnitude: 10.0
+        - magnitude: 15.0
+        - magnitude: 20.0
+        - magnitude: 25.0
+    - name: threshold
+      params:
+        - magnitude: 0.2
+        - magnitude: 0.3
+        - magnitude: 0.4
+        - magnitude: 0.6
+        - magnitude: 0.8
+    - name: fibrous_noise
+      params:
+        - blur: 0.1
+          blotches: 0
+        - blur: 0.25
+          blotches: 0
+        - blur: 0.5
+          blotches: 0
+        - blur: 0.75
+          blotches: 0
+        - blur: 1
+          blotches: 0
+    - name: multiscale_noise
+      params:
+        - blur: 0.1
+          blotches: 0
+        - blur: 0.25
+          blotches: 0
+        - blur: 0.5
+          blotches: 0
+        - blur: 0.75
+          blotches: 0
+        - blur: 1
+          blotches: 0
+    - name: gaussian_blur
+      params:
+        - magnitude: 0.25
+        - magnitude: 0.5
+        - magnitude: 0.75
+        - magnitude: 1.25
+        - magnitude: 1.5
+    - name: gaussian_noise_rgb
+      params:
+        - magnitude: 0.08
+        - magnitude: 0.12
+        - magnitude: 0.16
+        - magnitude: 0.20
+        - magnitude: 0.24
+    - name: shot_noise_rgb
+      params:
+        - magnitude: 55
+        - magnitude: 45
+        - magnitude: 35
+        - magnitude: 25
+        - magnitude: 15
+    - name: pixelate
+      params:
+        - magnitude: 0.8
+        - magnitude: 0.7
+        - magnitude: 0.6
+        - magnitude: 0.5
+        - magnitude: 0.4
+    - name: jpeg_compression
+      params:
+        - quality: 18
+        - quality: 15
+        - quality: 10
+        - quality: 7
+        - quality: 5
+    - name: elastic
+      params:
+        - sigma: 70
+          alpha: 500
+          alpha_affine: 10
+        - sigma: 60
+          alpha: 500
+          alpha_affine: 20
+        - sigma: 60
+          alpha: 800
+          alpha_affine: 30
+        - sigma: 60
+          alpha: 800
+          alpha_affine: 40
+        - sigma: 50
+          alpha: 800
+          alpha_affine: 40
