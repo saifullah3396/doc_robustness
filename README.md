@@ -3,17 +3,25 @@ This repository contains the datasets and code for the paper "Are Deep Models Ro
 
 Requires Python 3+. For evaluation, please download the data from the links below.
 
-# Download Links
-## RVLCDIP-D:
+## Example Distortions:
+<img align="center" src="assets/example_distortions.png" width="2000">
+
+## Mean Corruption Error (mCE) and Relative mCE values:
+<img align="center" src="assets/comparison.jpg" width="2000">
+
+# RVL-CDIP-D:
 [Download RVL-CDIP-D here.](link)
 
 RVL-CDIP-D has 16 classes with images of size 1000xW just like the original RVL-CDIP dataset. Each sample image has 21 different augmentations of 5 severity levels.
+<img align="center" src="assets/rvlcdip_results.png" width="2000">
+
 
 ## Tobacco3482-D:
 [Download Tobacco3482-D here.](link)
 
 Tobacco3482-D has 10 classes with images of size 1000xW. Each sample image has 21 different augmentations of 5 severity levels.
 
+<img align="center" src="assets/tobacco3482_results.png" width="2000">
 
 # Generating the datasets from scratch
 Install the project dependencies.
