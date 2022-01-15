@@ -10,7 +10,7 @@ Requires Python 3+. For evaluation, please download the data from the links belo
 <img align="center" src="assets/comparison.jpg" width="2000">
 
 # RVL-CDIP-D:
-[Download RVL-CDIP-D here.](link)
+[Download RVL-CDIP-D here.](To Be Added)
 
 RVL-CDIP-D has 16 classes with images of size 1000xW just like the original RVL-CDIP dataset. Each sample image has 21 different augmentations of 5 severity levels.
 <img align="center" src="assets/rvlcdip_results.png" width="2000">
@@ -19,7 +19,7 @@ This spreadsheet shows the calculation of the
 [mean corruption error (mCE) for RVL-CDIP-D dataset](https://docs.google.com/spreadsheets/d/1l8dK7BXAnYSmtqOzIVDxokHWLa3dNi3xkEsZ9YRzO4o/edit?usp=sharing).
 
 # Tobacco3482-D:
-[Download Tobacco3482-D here.](link)
+[Download Tobacco3482-D here.](To Be Added)
 
 Tobacco3482-D has 10 classes with images of size 1000xW. Each sample image has 21 different augmentations of 5 severity levels.
 
