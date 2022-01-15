@@ -1,4 +1,4 @@
-# Are Deep Models Robust against Real Distortions?A Case Study on Document Image Classification
+# Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification
 This repository contains the datasets and some code for the paper "Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification" by Saifullah, Shoaib Ahmed Siddiqui, Stefan Agne, Andreas Dengel, Sheraz Ahmed.
 
 Requires Python 3+. For evaluation, please download the data from the links below.
