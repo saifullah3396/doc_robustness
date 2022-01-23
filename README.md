@@ -63,7 +63,7 @@ Run the augmentation script with the Tobacco3482 config.
  ./scripts/augment.sh --cfg ./cfg/tobacco-aug.yaml
 ```
 
-# Citation
+<!-- # Citation
 If you find this useful in your research, please consider citing:
 ```
 @article{saifullah2022doc-robustness,
@@ -71,7 +71,7 @@ If you find this useful in your research, please consider citing:
   author={Saifullah, S. A. Siddiqui, s. Agne, A. Dengel, S. Ahmed},
   journal={ArXiv},
   year={2022}
-}
+} -->
 ```
 
 # License
