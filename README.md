@@ -1,5 +1,5 @@
 # Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification
-This repository contains the datasets and code for the paper "Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification" by Saifullah, Shoaib Ahmed Siddiqui, Stefan Agne, Andreas Dengel, and Sheraz Ahmed.
+This repository contains the datasets and code for the paper [Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification](https://www.preprints.org/manuscript/202202.0058/v1) by Saifullah, Shoaib Ahmed Siddiqui, Stefan Agne, Andreas Dengel, and Sheraz Ahmed.
 
 Requires Python 3+. For evaluation, please download the data from the links below.
 
@@ -63,15 +63,10 @@ Run the augmentation script with the Tobacco3482 config.
  ./scripts/augment.sh --cfg ./cfg/tobacco-aug.yaml
 ```
 
-<!-- # Citation
+# Citation
 If you find this useful in your research, please consider citing:
 ```
-@article{saifullah2022doc-robustness,
-  title={Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification},
-  author={Saifullah, S. A. Siddiqui, s. Agne, A. Dengel, S. Ahmed},
-  journal={ArXiv},
-  year={2022}
-} -->
+Saifullah, S.; Siddiqui, S.A.; Agne, S.; Dengel, A.; Ahmed, S. Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification. Preprints 2022, 2022020058 (doi: 10.20944/preprints202202.0058.v1).
 ```
 
 # License
