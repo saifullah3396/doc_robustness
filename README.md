@@ -66,7 +66,7 @@ Run the augmentation script with the Tobacco3482 config.
 # Citation
 If you find this useful in your research, please consider citing:
 ```
-Saifullah, S.; Siddiqui, S.A.; Agne, S.; Dengel, A.; Ahmed, S. Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification. Preprints 2022, 2022020058 (doi: 10.20944/preprints202202.0058.v1).
+-, S.; Siddiqui, S.A.; Agne, S.; Dengel, A.; Ahmed, S. Are Deep Models Robust against Real Distortions? A Case Study on Document Image Classification. Preprints 2022, 2022020058 (doi: 10.20944/preprints202202.0058.v1).
 ```
 
 # License
